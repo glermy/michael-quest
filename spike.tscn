@@ -4,15 +4,16 @@
 [ext_resource type="PackedScene" uid="uid://oxuryggcvtiq" path="res://deatharea.tscn" id="2_tggh8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5sso0"]
-size = Vector2(116.06139, 134.34372)
+size = Vector2(65.119965, 89.30044)
 
 [node name="spike" type="StaticBody2D"]
+scale = Vector2(0.88000154, 0.71999985)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_7k7bx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.90357786, 3.8239331)
+position = Vector2(0, 23.999996)
 scale = Vector2(0.8599514, 0.89585227)
 shape = SubResource("RectangleShape2D_5sso0")
 

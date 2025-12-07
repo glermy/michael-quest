@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwv7gcnw4thwt"]
+
+[ext_resource type="Script" uid="uid://k7kfbjlxlqt1" path="res://hud.gd" id="1_efote"]
+[ext_resource type="Texture2D" uid="uid://cad3utqtku5fu" path="res://images/michaelcoin.png" id="2_vow1y"]
+
+[node name="HUD" type="CanvasLayer"]
+follow_viewport_scale = 0.5
+script = ExtResource("1_efote")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 4.0
+offset_top = 7.0
+offset_right = 137.0
+offset_bottom = 416.0
+scale = Vector2(0.37455028, 0.13094507)
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_vow1y")
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
