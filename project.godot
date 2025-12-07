@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="michael quest"
-run/main_scene="uid://4pqund3nukl7"
+run/main_scene="uid://bk6gaiblcrmxq"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+playermanager="*res://die.gd"
 
 [display]
 
@@ -22,6 +26,10 @@ window/stretch/mode="canvas_items"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
+[physics]
+
+2d/default_gravity=1550.0
 
 [rendering]
 
