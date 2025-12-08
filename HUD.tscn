@@ -12,7 +12,7 @@ offset_left = 4.0
 offset_top = 7.0
 offset_right = 137.0
 offset_bottom = 416.0
-scale = Vector2(0.37455028, 0.13094507)
+scale = Vector2(0.4201361, 0.14688215)
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
