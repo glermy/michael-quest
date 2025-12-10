@@ -28,9 +28,13 @@ window/stretch/mode="canvas_items"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
+
 [physics]
 
-2d/default_gravity=2000.0
+2d/default_gravity=1500.0
 
 [rendering]
 

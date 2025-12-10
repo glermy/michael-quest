@@ -1,11 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://dutwmv05lfyru"]
+[gd_scene load_steps=4 format=4 uid="uid://dutwmv05lfyru"]
 
 [ext_resource type="TileSet" uid="uid://csr360qieuh51" path="res://blocks.tres" id="1_jg0dc"]
 [ext_resource type="PackedScene" uid="uid://bhs5d25pivb8t" path="res://player.tscn" id="2_nmjpi"]
 [ext_resource type="PackedScene" uid="uid://bwv7gcnw4thwt" path="res://HUD.tscn" id="3_n7ypv"]
-[ext_resource type="PackedScene" uid="uid://cc8v7lxlhpya3" path="res://spike.tscn" id="4_0s5r2"]
-[ext_resource type="PackedScene" uid="uid://b6geq65t0dvnd" path="res://coin.tscn" id="5_7j8ne"]
-[ext_resource type="PackedScene" uid="uid://b4kk7kkk83sm2" path="res://goal.tscn" id="6_0s5r2"]
 
 [node name="Level2" type="Node2D"]
 
@@ -16,25 +13,3 @@ tile_set = ExtResource("1_jg0dc")
 [node name="player" parent="." instance=ExtResource("2_nmjpi")]
 
 [node name="HUD" parent="player" instance=ExtResource("3_n7ypv")]
-
-[node name="spike" parent="." instance=ExtResource("4_0s5r2")]
-position = Vector2(739.00006, 79)
-
-[node name="coin" parent="." instance=ExtResource("5_7j8ne")]
-position = Vector2(522, 67)
-scale = Vector2(0.6311993, 0.5164348)
-
-[node name="coin2" parent="." instance=ExtResource("5_7j8ne")]
-position = Vector2(738.99994, -64)
-scale = Vector2(0.6311993, 0.5164348)
-
-[node name="coin3" parent="." instance=ExtResource("5_7j8ne")]
-position = Vector2(975, -64)
-scale = Vector2(0.6311993, 0.5164348)
-
-[node name="goal" parent="." instance=ExtResource("6_0s5r2")]
-position = Vector2(2222, -901)
-level_name = "canvas_layer.tscn"
-
-[node name="spike2" parent="." instance=ExtResource("4_0s5r2")]
-position = Vector2(2121, 205.99995)

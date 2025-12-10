@@ -1,23 +1,21 @@
 [gd_scene load_steps=3 format=3 uid="uid://bwv7gcnw4thwt"]
 
 [ext_resource type="Script" uid="uid://k7kfbjlxlqt1" path="res://hud.gd" id="1_efote"]
-[ext_resource type="Texture2D" uid="uid://cad3utqtku5fu" path="res://images/michaelcoin.png" id="2_vow1y"]
+[ext_resource type="Texture2D" uid="uid://dh0ol6kv8ujpo" path="res://images/michaelcoin2.png" id="2_efote"]
 
 [node name="HUD" type="CanvasLayer"]
 follow_viewport_scale = 0.5
 script = ExtResource("1_efote")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 4.0
-offset_top = 7.0
-offset_right = 137.0
-offset_bottom = 416.0
-scale = Vector2(0.4201361, 0.14688215)
+texture_filter = 1
+offset_right = 23.0
+offset_bottom = 39.10257
+scale = Vector2(3.3072023, 1.5599998)
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_vow1y")
+texture = ExtResource("2_efote")
 
 [node name="Label" type="Label" parent="HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100

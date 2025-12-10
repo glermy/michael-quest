@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ubervmrtgh16"]
+
+[node name="letter" type="CanvasLayer"]
+
+[node name="Window" type="Window" parent="."]
+oversampling_override = 1.0

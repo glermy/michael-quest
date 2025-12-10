@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b6geq65t0dvnd"]
 
 [ext_resource type="Script" uid="uid://g4u48kikrbhi" path="res://coin.gd" id="1_0t63x"]
-[ext_resource type="Texture2D" uid="uid://cad3utqtku5fu" path="res://images/michaelcoin.png" id="2_v7riw"]
+[ext_resource type="Texture2D" uid="uid://dh0ol6kv8ujpo" path="res://images/michaelcoin2.png" id="2_0t63x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pdq0q"]
 radius = 61.400326
@@ -11,10 +11,11 @@ scale = Vector2(0.7172707, 0.7172707)
 script = ExtResource("1_0t63x")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_v7riw")
+texture_filter = 1
+texture = ExtResource("2_0t63x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(1.0043924, 0.9975363)
+scale = Vector2(0.16213982, 0.16103303)
 shape = SubResource("CircleShape2D_pdq0q")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

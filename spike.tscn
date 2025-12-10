@@ -1,21 +1,23 @@
 [gd_scene load_steps=4 format=3 uid="uid://cc8v7lxlhpya3"]
 
-[ext_resource type="Texture2D" uid="uid://cwuekqv2h28s8" path="res://images/spike.png" id="1_7k7bx"]
+[ext_resource type="Texture2D" uid="uid://cu78hi72ilyxd" path="res://images/spike2.png" id="1_7k7bx"]
 [ext_resource type="PackedScene" uid="uid://oxuryggcvtiq" path="res://deatharea.tscn" id="2_tggh8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5sso0"]
-size = Vector2(65.119965, 89.30044)
+size = Vector2(8.7743225, 21.659515)
 
 [node name="spike" type="StaticBody2D"]
 scale = Vector2(0.88000154, 0.71999985)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource("1_7k7bx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 23.999996)
-scale = Vector2(0.8599514, 0.89585227)
+position = Vector2(-1.1368681e-13, 2.7339675)
+scale = Vector2(0.49631524, 0.51703525)
 shape = SubResource("RectangleShape2D_5sso0")
 
 [node name="Area2D" parent="." instance=ExtResource("2_tggh8")]
-scale = Vector2(0.8840592, 0.8770012)
+position = Vector2(-1.9073486e-06, 0)
+scale = Vector2(0.13790292, 0.13680196)
