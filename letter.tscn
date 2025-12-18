@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://ubervmrtgh16"]
+[gd_scene load_steps=6 format=3 uid="uid://ubervmrtgh16"]
 
+[ext_resource type="Script" uid="uid://bh50p48nyn8wc" path="res://letter.gd" id="1_57kop"]
 [ext_resource type="Texture2D" uid="uid://bkqv5mmp0ataj" path="res://images/icon.jpg" id="1_r6swm"]
+[ext_resource type="FontFile" uid="uid://6wyodl7dq6e6" path="res://images/W95font.otf" id="2_5gbsb"]
+[ext_resource type="Script" uid="uid://dh8y6r340x6nj" path="res://controls.gd" id="4_kv2n4"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_r6swm"]
 
 [node name="letter" type="CanvasLayer"]
+script = ExtResource("1_57kop")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -16,10 +20,11 @@ texture = ExtResource("1_r6swm")
 
 [node name="Word" type="Window" parent="."]
 oversampling_override = 1.0
-title = "Michaelsoft Word 18 A.D."
+title = "Michaelsoft Letter"
 position = Vector2i(100, 50)
 size = Vector2i(500, 550)
 theme_override_colors/title_color = Color(1, 0.95686275, 0.9647059, 1)
+theme_override_fonts/title_font = ExtResource("2_5gbsb")
 
 [node name="MarginContainer" type="MarginContainer" parent="Word"]
 offset_left = 33.0
@@ -40,10 +45,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_top = 15.0
-offset_right = 10.0
-offset_bottom = 15.0
+offset_left = 6.0
+offset_right = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -53,19 +56,93 @@ layout_mode = 2
 [node name="Label" type="Label" parent="Word/MarginContainer/TextureRect/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.020712517, 0.012945323, 0, 1)
-text = "bleehhhhhhh :P
-(placeholder)"
+theme_override_fonts/font = ExtResource("2_5gbsb")
+theme_override_font_sizes/font_size = 25
+text = "Dear Potential Michaelsoft Employee:"
+
+[node name="Label2" type="Label" parent="Word/MarginContainer/TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5gbsb")
+text = "
+We're happy to have recieved your application. However,
+ Michaelsoft doesn't accept just anyone. 
+
+That is why we have prepared a QUEST for you. One that TRAINS you 
+to RUN, JUMP, and HIDE. Complete this adventure, and you will
+be rewarded with employment (maybe) and the best part - 15%
+discounts on the Michaelsoft Cubicle suite!
+
+Unfortunately, many employees do not get past our challenge without
+sustaining major injuries or even death. But don't worry. These 
+levels are so easy, a pickle could complete them! 
+
+One additional note - Be sure to collect plenty of Michaelcoins. They
+appear both along the main path and in hidden areas on the way to
+Michaelsoft Headquarters. Those who collect them all are sure to 
+recieve plenty of rewards upon arrival.
+
+Good luck on your QUEST. And make sure to begin before the latest 
+version of Michaelsoft Letter eats up all of your RAM.
+"
+
+[node name="Label3" type="Label" parent="Word/MarginContainer/TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5gbsb")
+theme_override_font_sizes/font_size = 35
+text = "                                          Bill ❤︎"
 
 [node name="Controls" type="Window" parent="."]
 oversampling_override = 1.0
-title = "controls.exe"
+title = "controls.txt"
 position = Vector2i(735, 120)
 size = Vector2i(200, 100)
+theme_override_fonts/title_font = ExtResource("2_5gbsb")
+script = ExtResource("4_kv2n4")
 
 [node name="Label" type="Label" parent="Controls"]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_5gbsb")
 text = "Arrow keys: move
 Space: jump
+Esc: pause
 
 Don't die!"
+
+[node name="Start" type="Window" parent="."]
+oversampling_override = 1.0
+title = "Michaelsoft Start Menu (not that one)"
+position = Vector2i(720, 365)
+size = Vector2i(400, 150)
+theme_override_fonts/title_font = ExtResource("2_5gbsb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Start"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.5
+offset_top = 59.5
+offset_right = -100.5
+offset_bottom = -59.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Start/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="Start/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_5gbsb")
+theme_override_font_sizes/font_size = 30
+text = "Continue...."
+
+[connection signal="pressed" from="Start/VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]

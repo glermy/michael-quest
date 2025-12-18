@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://oxuryggcvtiq" path="res://level elements/deatharea.tscn" id="7_7dov7"]
 [ext_resource type="PackedScene" uid="uid://doiwiek7cxe72" path="res://level elements/invisible_wall.tscn" id="8_ehv2h"]
 
-[node name="Level2" type="Node2D"]
+[node name="level_2" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(2, 0)
