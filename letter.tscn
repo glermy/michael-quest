@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://ubervmrtgh16"]
+[gd_scene load_steps=5 format=3 uid="uid://ubervmrtgh16"]
 
 [ext_resource type="Script" uid="uid://bh50p48nyn8wc" path="res://letter.gd" id="1_57kop"]
-[ext_resource type="Texture2D" uid="uid://bkqv5mmp0ataj" path="res://images/icon.jpg" id="1_r6swm"]
 [ext_resource type="FontFile" uid="uid://6wyodl7dq6e6" path="res://images/W95font.otf" id="2_5gbsb"]
 [ext_resource type="Script" uid="uid://dh8y6r340x6nj" path="res://controls.gd" id="4_kv2n4"]
 
@@ -10,13 +9,13 @@
 [node name="letter" type="CanvasLayer"]
 script = ExtResource("1_57kop")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_r6swm")
+color = Color(1.4439225e-06, 0.65667254, 0.65166134, 1)
 
 [node name="Word" type="Window" parent="."]
 oversampling_override = 1.0
@@ -121,7 +120,7 @@ size = Vector2i(400, 150)
 theme_override_fonts/title_font = ExtResource("2_5gbsb")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Start"]
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 100.5
