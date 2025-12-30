@@ -1,0 +1,144 @@
+[gd_scene load_steps=3 format=3 uid="uid://di75836cu1h1o"]
+
+[ext_resource type="Script" uid="uid://dckpnaf80lmbn" path="res://letter_2.gd" id="1_bm1j4"]
+[ext_resource type="FontFile" uid="uid://6wyodl7dq6e6" path="res://images/W95font.otf" id="2_41o45"]
+
+[node name="letter2" type="CanvasLayer"]
+script = ExtResource("1_bm1j4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -1.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.654902, 0.6509804, 1)
+
+[node name="Letter" type="Window" parent="."]
+oversampling_override = 1.0
+title = "Michaelsoft Letter"
+position = Vector2i(300, 50)
+size = Vector2i(500, 550)
+theme_override_fonts/title_font = ExtResource("2_41o45")
+
+[node name="MarginContainer" type="MarginContainer" parent="Letter"]
+offset_left = 32.0
+offset_top = 26.0
+offset_right = 467.0
+offset_bottom = 550.0
+
+[node name="ColorRect" type="ColorRect" parent="Letter/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Letter/MarginContainer/ColorRect"]
+layout_mode = 0
+offset_left = 7.0
+offset_right = 431.0
+offset_bottom = 524.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Letter/MarginContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Letter/MarginContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_41o45")
+theme_override_font_sizes/font_size = 25
+text = "Congratulations!"
+
+[node name="Label2" type="Label" parent="Letter/MarginContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_41o45")
+text = "
+Most of our recruits never make it this far. You should be proud of
+yourself! Not because they died or anything of course... they just 
+gave up.... yeah...
+
+You may have noticed the big twist we pulled in the 4th level, along
+with the biome change. We did that to teach you a lesson. Our
+employees strive to complete their projects no matter how difficult
+they may be. We also did that so they feel more accomplished when
+they eventually get laid off and replaced with AI. 
+
+Still collecting those Michaelcoins? Good job. As a result of your
+hard work.. we're including extra rewards for you to unlock. If you 
+collect them all... we will throw in a full year subscription to 
+Michaelsoft DuoDrive! Oh... you don't want that? How about one 
+months worth of Michaelsoft Clip! It's our new signature desktop 
+assistant for Michaelsoft Letter! Still don't want that?????? Too bad. 
+You're getting one or the other. No negotiations.
+
+Anyways.. good luck on the rest of your QUEST. Everyone at 
+Michaelsoft is rooting for you! (well not really but just pretend they 
+are)."
+
+[node name="Label3" type="Label" parent="Letter/MarginContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_41o45")
+theme_override_font_sizes/font_size = 25
+text = "          - Unnamed Michaelsoft Employee #56"
+
+[node name="warning" type="Window" parent="."]
+oversampling_override = 1.0
+title = "warning.txt"
+position = Vector2i(55, 200)
+size = Vector2i(200, 200)
+theme_override_fonts/title_font = ExtResource("2_41o45")
+
+[node name="ColorRect" type="ColorRect" parent="warning"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.351989, 0.2851339, 1)
+
+[node name="Label" type="Label" parent="warning"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_41o45")
+text = "DO NOT TRUST THEM
+DO NOT TRUST THEM
+THE MICHAELCOINS ARE A LIE
+THE WHOLE COMPANY 
+IS LYING TO YOU
+DO NOT TRUST THEM
+THEY WILL MAKE YOU THEIR
+TEST SUBJECT
+DO NOT TRUST THEM
+DO NOT TRUST THEM"
+
+[node name="continue" type="Window" parent="."]
+oversampling_override = 1.0
+title = "continue.exe"
+position = Vector2i(900, 300)
+size = Vector2i(200, 100)
+theme_override_fonts/title_font = ExtResource("2_41o45")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="continue"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Button" type="Button" parent="continue/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_41o45")
+theme_override_font_sizes/font_size = 20
+text = "Continue...?"
+
+[connection signal="pressed" from="continue/HBoxContainer/Button" to="." method="_on_button_pressed"]

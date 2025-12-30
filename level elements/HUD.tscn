@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bwv7gcnw4thwt"]
 
-[ext_resource type="Script" uid="uid://k7kfbjlxlqt1" path="res://hud.gd" id="1_efote"]
+[ext_resource type="Script" uid="uid://k7kfbjlxlqt1" path="res://scripts/hud.gd" id="1_efote"]
 [ext_resource type="Texture2D" uid="uid://dh0ol6kv8ujpo" path="res://images/michaelcoin2.png" id="2_efote"]
 
 [node name="HUD" type="CanvasLayer"]

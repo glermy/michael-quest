@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="michael quest"
-run/main_scene="uid://bm0tkaqs1kttg"
+run/main_scene="uid://bhcfjpyd2rc4f"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-playermanager="*res://die.gd"
-coinmanager="*res://coinmanager.gd"
+playermanager="*res://scripts/die.gd"
+coinmanager="*res://scripts/coinmanager.gd"
 
 [display]
 
