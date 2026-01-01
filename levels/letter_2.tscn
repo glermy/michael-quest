@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://di75836cu1h1o"]
+[gd_scene load_steps=4 format=3 uid="uid://di75836cu1h1o"]
 
-[ext_resource type="Script" uid="uid://dckpnaf80lmbn" path="res://letter_2.gd" id="1_bm1j4"]
+[ext_resource type="Script" uid="uid://dckpnaf80lmbn" path="res://scripts/letter_2.gd" id="1_bm1j4"]
 [ext_resource type="FontFile" uid="uid://6wyodl7dq6e6" path="res://images/W95font.otf" id="2_41o45"]
+[ext_resource type="PackedScene" uid="uid://dxnscscww10f1" path="res://level elements/lettersound.tscn" id="3_41o45"]
 
 [node name="letter2" type="CanvasLayer"]
 script = ExtResource("1_bm1j4")
@@ -84,6 +85,15 @@ theme_override_fonts/font = ExtResource("2_41o45")
 theme_override_font_sizes/font_size = 25
 text = "          - Unnamed Michaelsoft Employee #56"
 
+[node name="ColorRect" type="ColorRect" parent="Letter"]
+z_index = -4096
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5921569, 0.5921569, 0.5921569, 1)
+
 [node name="warning" type="Window" parent="."]
 oversampling_override = 1.0
 title = "warning.txt"
@@ -140,5 +150,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_41o45")
 theme_override_font_sizes/font_size = 20
 text = "Continue...?"
+
+[node name="lettersound" parent="." instance=ExtResource("3_41o45")]
 
 [connection signal="pressed" from="continue/HBoxContainer/Button" to="." method="_on_button_pressed"]

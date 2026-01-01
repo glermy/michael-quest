@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://in85c2dihxtc"]
+[gd_scene load_steps=4 format=3 uid="uid://in85c2dihxtc"]
 
-[ext_resource type="Script" uid="uid://csn58a0tnkjhn" path="res://letter_3.gd" id="1_6iw3x"]
+[ext_resource type="Script" uid="uid://csn58a0tnkjhn" path="res://scripts/letter_3.gd" id="1_6iw3x"]
 [ext_resource type="FontFile" uid="uid://6wyodl7dq6e6" path="res://images/W95font.otf" id="1_iixwa"]
+[ext_resource type="PackedScene" uid="uid://dxnscscww10f1" path="res://level elements/lettersound.tscn" id="3_sfdil"]
 
 [node name="letter_3" type="CanvasLayer"]
 script = ExtResource("1_6iw3x")
@@ -181,5 +182,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_iixwa")
 theme_override_font_sizes/font_size = 20
 text = "Continue."
+
+[node name="lettersound" parent="." instance=ExtResource("3_sfdil")]
 
 [connection signal="pressed" from="Window2/HBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="michael quest"
-run/main_scene="uid://bm8wxo6ejy850"
+run/main_scene="uid://bk6gaiblcrmxq"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -41,3 +41,4 @@ theme/default_font_multichannel_signed_distance_field=true
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.27393627, 0.66399544, 0.7609211, 1)

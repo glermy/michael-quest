@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cahc23xvo083c"]
+
+[ext_resource type="Texture2D" uid="uid://c4842ct1fsb6t" path="res://images/blisss2.png.png" id="1_oabld"]
+
+[node name="background" type="TextureRect"]
+z_index = -4096
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_oabld")

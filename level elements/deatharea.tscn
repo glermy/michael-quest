@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://oxuryggcvtiq"]
+[gd_scene load_steps=4 format=3 uid="uid://oxuryggcvtiq"]
 
 [ext_resource type="Script" uid="uid://dm5pfjilg1ebv" path="res://scripts/deatharea.gd" id="1_82m6i"]
+[ext_resource type="AudioStream" uid="uid://b8gncdf4cikgx" path="res://sfx/hitHurt.wav" id="2_cpwka"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_css1a"]
 size = Vector2(130, 133)
@@ -12,4 +13,12 @@ script = ExtResource("1_82m6i")
 position = Vector2(1, -0.5)
 shape = SubResource("RectangleShape2D_css1a")
 
+[node name="death" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_cpwka")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

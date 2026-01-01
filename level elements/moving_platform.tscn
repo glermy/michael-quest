@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bn8xtohv1ydps"]
 
-[ext_resource type="Script" uid="uid://bqbwys355h64p" path="res://moving_platform.gd" id="1_hrpga"]
+[ext_resource type="Script" uid="uid://bqbwys355h64p" path="res://scripts/moving_platform.gd" id="1_hrpga"]
 [ext_resource type="Texture2D" uid="uid://c7ma041kbaadp" path="res://images/movingplatform.png" id="2_f8lbu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oaxfr"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ubervmrtgh16"]
+[gd_scene load_steps=6 format=3 uid="uid://ubervmrtgh16"]
 
 [ext_resource type="Script" uid="uid://bh50p48nyn8wc" path="res://scripts/letter.gd" id="1_57kop"]
 [ext_resource type="FontFile" uid="uid://6wyodl7dq6e6" path="res://images/W95font.otf" id="2_5gbsb"]
 [ext_resource type="Script" uid="uid://dh8y6r340x6nj" path="res://scripts/controls.gd" id="4_kv2n4"]
+[ext_resource type="PackedScene" uid="uid://dxnscscww10f1" path="res://level elements/lettersound.tscn" id="4_w1vhc"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_r6swm"]
 
@@ -94,6 +95,15 @@ theme_override_fonts/font = ExtResource("2_5gbsb")
 theme_override_font_sizes/font_size = 35
 text = "                                          Bill ❤︎"
 
+[node name="ColorRect" type="ColorRect" parent="Word"]
+z_index = -4096
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5911141, 0.591114, 0.59111404, 1)
+
 [node name="Controls" type="Window" parent="."]
 oversampling_override = 1.0
 title = "controls.txt"
@@ -111,6 +121,15 @@ Space: jump
 
 Don't die!"
 
+[node name="ColorRect" type="ColorRect" parent="Controls"]
+z_index = -4086
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5921569, 0.5921569, 0.5921569, 1)
+
 [node name="Start" type="Window" parent="."]
 oversampling_override = 1.0
 title = "Michaelsoft Start Menu (not that one)"
@@ -123,9 +142,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 100.5
-offset_top = 59.5
-offset_right = -100.5
-offset_bottom = -59.5
+offset_top = 56.0
+offset_right = -98.0
+offset_bottom = -22.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
@@ -142,5 +161,7 @@ size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_5gbsb")
 theme_override_font_sizes/font_size = 30
 text = "Continue...."
+
+[node name="lettersound" parent="." instance=ExtResource("4_w1vhc")]
 
 [connection signal="pressed" from="Start/VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]

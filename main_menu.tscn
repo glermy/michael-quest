@@ -1,11 +1,37 @@
-[gd_scene load_steps=3 format=3 uid="uid://bk6gaiblcrmxq"]
+[gd_scene load_steps=8 format=3 uid="uid://bk6gaiblcrmxq"]
 
 [ext_resource type="Script" uid="uid://b63vpj8uj1g5m" path="res://scripts/menu.gd" id="1_v2lfg"]
+[ext_resource type="FontFile" uid="uid://d0gqq40jheg0t" path="res://images/NewRocker-Regular.ttf" id="2_7vrkn"]
+[ext_resource type="Shader" uid="uid://6fny4voxveeh" path="res://scroll.gdshader" id="2_glbon"]
+[ext_resource type="FontFile" uid="uid://6wyodl7dq6e6" path="res://images/W95font.otf" id="3_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://dqqww3pfnf7pn" path="res://images/jlkjfl.png" id="3_nlkkf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qe12f"]
+shader = ExtResource("2_glbon")
 
 [sub_resource type="Theme" id="Theme_wf015"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_v2lfg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.6085154, 0.7234501, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_qe12f")
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_top = 8.0
+offset_right = 1160.0
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_nlkkf")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = -1
@@ -13,10 +39,10 @@ anchor_left = 0.031000001
 anchor_top = 0.017
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 540.288
-offset_top = 312.984
-offset_right = -576.0
-offset_bottom = -324.0
+offset_left = 267.788
+offset_top = 219.984
+offset_right = -303.5
+offset_bottom = -231.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -24,28 +50,28 @@ grow_vertical = 2
 layout_mode = 2
 theme = SubResource("Theme_wf015")
 theme_type_variation = &"HeaderLarge"
-theme_override_colors/font_color = Color(1.7808378e-06, 0.56608516, 0.4007679, 1)
-theme_override_font_sizes/font_size = 40
-text = "MICHAEL QUEST"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 90
+text = "Michael Quest"
 horizontal_alignment = 1
 
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.4509804, 0.2509804, 0.81960785, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.4509804, 0.2509804, 0.81960785, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_hover_color = Color(0.09411765, 0.68235296, 0.050980393, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.09411765, 0.68235296, 0.050980393, 1)
+theme_override_fonts/font = ExtResource("3_fu7sn")
+theme_override_font_sizes/font_size = 45
 text = "Start"
-
-[node name="Options" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Options"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_fu7sn")
+theme_override_font_sizes/font_size = 45
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
